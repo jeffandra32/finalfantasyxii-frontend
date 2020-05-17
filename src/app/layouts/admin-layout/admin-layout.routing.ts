@@ -7,7 +7,7 @@ export const AdminLayoutRoutes: Routes = [
     loadChildren: () => import('./../../pages/home/home.module').then(h => h.HomeModule),
   },
   {
-    path: 'profile',
-    loadChildren: () => import('./../../pages/profile/profile.module').then(p => p.ProfileModule),
+    path: 'characters',
+    loadChildren: () => import('../../pages/characters/characters.module').then(p => p.CharactersModule),
   },
 ];

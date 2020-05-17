@@ -1,6 +1,6 @@
 hr {
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
   border: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -9,6 +9,11 @@ img {
  width: 30px;
  margin-right: 25px;
  color: black;
+}
+
+.router-link-active {
+background-color: #06496d;
+border-radius: 1px 1px 1px 1px;
 }
 
 .icon-img {

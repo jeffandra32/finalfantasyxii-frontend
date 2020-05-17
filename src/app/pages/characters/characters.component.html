@@ -1,0 +1,303 @@
+<div class="header bg-gradient-danger pb-5 pt-5 pt-md-8"></div>
+
+<div class="container-fluid mt--7">
+  <!-- Loading -->
+  <div id="cards">
+    <figure class="card card--water">
+      <div class="card__image-container">
+        <img
+          src="../../../assets/img/bg/char_01.1.png"
+          alt="Vaan"
+          class="card__image"
+        />
+      </div>
+
+      <figcaption class="card__caption">
+        <h1 class="card__name">Vaan</h1>
+
+        <table class="card__stats">
+          <tbody>
+            <tr>
+              <th>HP</th>
+              <td>130</td>
+            </tr>
+            <tr>
+              <th>Attack</th>
+              <td>65</td>
+            </tr>
+
+            <tr>
+              <th>Defense</th>
+              <td>60</td>
+            </tr>
+
+            <tr>
+              <th>Speed</th>
+              <td>65</td>
+            </tr>
+          </tbody>
+        </table>
+      </figcaption>
+    </figure>
+
+    <figure class="card card--electric">
+      <div class="card__image-container">
+        <img
+          src="../../../assets/img/bg/char_04.png"
+          alt="Jolteon"
+          class="card__image"
+        />
+      </div>
+
+      <figcaption class="card__caption">
+        <h1 class="card__name">Ashe</h1>
+        <table class="card__stats">
+          <tbody>
+            <tr>
+              <th>HP</th>
+              <td>65</td>
+            </tr>
+            <tr>
+              <th>Attack</th>
+              <td>65</td>
+            </tr>
+
+            <tr>
+              <th>Defense</th>
+              <td>60</td>
+            </tr>
+
+            <tr>
+              <th>Speed</th>
+              <td>130</td>
+            </tr>
+          </tbody>
+        </table>
+      </figcaption>
+    </figure>
+
+    <figure class="card card--fire">
+      <div class="card__image-container">
+        <img
+          src="../../../assets/img/bg/char_02.png"
+          alt="Flareon"
+          class="card__image"
+        />
+      </div>
+
+      <figcaption class="card__caption">
+        <h1 class="card__name">Balthier</h1>
+        <table class="card__stats">
+          <tbody>
+            <tr>
+              <th>HP</th>
+              <td>65</td>
+            </tr>
+            <tr>
+              <th>Attack</th>
+              <td>130</td>
+            </tr>
+
+            <tr>
+              <th>Defense</th>
+              <td>60</td>
+            </tr>
+            <tr>
+              <th>Speed</th>
+              <td>65</td>
+            </tr>
+          </tbody>
+        </table>
+      </figcaption>
+    </figure>
+
+    <figure class="card card--psychic">
+      <div class="card__image-container">
+        <img
+          src="../../../assets/img/bg/char_03.png"
+          alt="Espeon"
+          class="card__image"
+        />
+      </div>
+
+      <figcaption class="card__caption">
+        <h1 class="card__name">Penelo</h1>
+
+        <table class="card__stats">
+          <tbody>
+            <tr>
+              <th>HP</th>
+              <td>65</td>
+            </tr>
+            <tr>
+              <th>Attack</th>
+              <td>65</td>
+            </tr>
+
+            <tr>
+              <th>Defense</th>
+              <td>60</td>
+            </tr>
+
+            <tr>
+              <th>Speed</th>
+              <td>110</td>
+            </tr>
+          </tbody>
+        </table>
+      </figcaption>
+    </figure>
+
+    <figure class="card card--dark">
+      <div class="card__image-container">
+        <img
+          src="../../../assets/img/bg/char_07.png"
+          alt="Umbreon"
+          class="card__image"
+        />
+      </div>
+
+      <figcaption class="card__caption">
+        <h1 class="card__name">Fran</h1>
+        <table class="card__stats">
+          <tbody>
+            <tr>
+              <th>HP</th>
+              <td>95</td>
+            </tr>
+            <tr>
+              <th>Attack</th>
+              <td>65</td>
+            </tr>
+
+            <tr>
+              <th>Defense</th>
+              <td>110</td>
+            </tr>
+
+            <tr>
+              <th>Speed</th>
+              <td>65</td>
+            </tr>
+          </tbody>
+        </table>
+      </figcaption>
+    </figure>
+
+    <figure class="card card--grass">
+      <div class="card__image-container">
+        <img
+          src="../../../assets/img/bg/char_05.png"
+          alt="Leafeon"
+          class="card__image"
+        />
+      </div>
+
+      <figcaption class="card__caption">
+        <h1 class="card__name">Bash</h1>
+
+        <table class="card__stats">
+          <tbody>
+            <tr>
+              <th>HP</th>
+              <td>65</td>
+            </tr>
+            <tr>
+              <th>Attack</th>
+              <td>110</td>
+            </tr>
+
+            <tr>
+              <th>Defense</th>
+              <td>130</td>
+            </tr>
+
+            <tr>
+              <th>Speed</th>
+              <td>95</td>
+            </tr>
+          </tbody>
+        </table>
+      </figcaption>
+    </figure>
+  </div>
+
+  <script id="card-template" type="text/x-handlebars-template">
+    <figure class="card card--{{type}}">
+      <div class='card__image-container'>
+        <img src="{{imageAddress}}" alt="{{name}}" class='card__image' />
+      </div>
+
+      <figcaption class='card__caption'>
+        <h1 class='card__name'>
+          {{name}}
+        </h1>
+
+        <h3 class='card__type'>
+          e
+          {{type}}
+        </h3>
+
+        <table class='card__stats'>
+          <tr>
+            <th>
+              HP
+            </th>
+            <td>
+              {{hp}}
+            </td>
+          </tr>
+          <tr>
+            <th>
+              Attack
+            </th>
+            <td>
+              {{attack}}
+            </td>
+          </tr>
+
+          <tr>
+            <th>
+              Defense
+            </th>
+            <td>
+              {{defense}}
+            </td>
+          </tr>
+
+          <tr>
+            <th>
+              Special Defense
+            </th>
+            <td>
+              {{spDefense}}
+            </td>
+          </tr>
+          <tr>
+            <th>
+              Speed
+            </th>
+            <td>
+              {{speed}}
+            </td>
+          </tr>
+        </table>
+
+        <div class='card__abilities'>
+          <h4 class='card__ability'>
+            <span class='card__label'>
+              Ability
+            </span>
+            {{ability1}}
+          </h4>
+          <h4 class='card__ability'>
+            <span class='card__label'>
+              Hidden Ability
+            </span>
+            {{ability2}}
+          </h4>
+        </div>
+      </figcaption>
+    </figure>
+  </script>
+</div>
