@@ -1,0 +1,111 @@
+<div class="header py-7 py-lg-8">
+  <div class="separator separator-bottom separator-skew zindex-100"></div>
+</div>
+<!-- Page content -->
+<div class="container mt--8 pb-4">
+  <div class="row justify-content-center">
+    <div class="content first-content">
+      <div class="first-column">
+        <h2 class="title title-primary">Bem vindo de volta!</h2>
+        <span class="description description-primary"
+          >Já possui uma conta?</span
+        >
+        <br />
+        <span class="description description-primary">
+          Por favor entre com seus dados de autentiação.
+        </span>
+        <button
+          id="signin"
+          class="btn btn-primary"
+          [routerLink]="['/auth/login']"
+        >
+          Login
+        </button>
+      </div>
+      <div class="second-column m-1">
+        <img
+          src="./../../../../assets/img/logo_ff12tza (1).png"
+          alt="logo-full-stack-guide"
+        />
+
+        <!-- social media -->
+        <form class="form" [formGroup]="registerForm" (ngSubmit)="onRegister()">
+          <label class="label-input" for="">
+            <i class="far fa-user icon-modify"></i>
+            <input
+              type="text"
+              name="username"
+              class="form-control"
+              autocomplete="off"
+              placeholder="Usuário"
+              formControlName="username"
+            />
+          </label>
+
+          <label class="label-input" for="">
+            <i class="far fa-envelope icon-modify"></i>
+            <input
+              type="email"
+              name="email"
+              class="form-control"
+              placeholder="E-mail"
+              formControlName="email"
+              [ngClass]="{
+                'is-invalid': submitted && f.email.errors
+              }"
+            />
+          </label>
+          <div *ngIf="submitted && f.email.errors" class="error-input-form">
+            <div *ngIf="f.email.errors.required">
+              Este e-mail não é válido.
+            </div>
+          </div>
+
+          <label class="label-input" for="">
+            <i class="far fa-user icon-modify"></i>
+            <input
+              type="text"
+              name="firstName"
+              class="form-control"
+              placeholder="Nome"
+              formControlName="firstName"
+            />
+          </label>
+
+          <label class="label-input" for="">
+            <i class="far fa-user icon-modify"></i>
+            <input
+              type="text"
+              name="lastName"
+              class="form-control"
+              placeholder="Sobrenome"
+              formControlName="lastName"
+            />
+          </label>
+
+          <label class="label-input" for="">
+            <i class="fas fa-lock icon-modify"></i>
+            <input
+              type="password"
+              name="password"
+              class="form-control"
+              placeholder="Senha"
+              formControlName="password"
+            />
+          </label>
+
+          <button
+            class="btn btn-second"
+            [disabled]="!registerForm.valid"
+            type="submit"
+          >
+            <app-loading [loadingLogin]="loadingLogin"></app-loading>
+            cadastrar
+          </button>
+        </form>
+      </div>
+      <!-- second column -->
+    </div>
+    <!-- second-content -->
+  </div>
+</div>

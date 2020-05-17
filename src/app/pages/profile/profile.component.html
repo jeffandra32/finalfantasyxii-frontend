@@ -1,0 +1,124 @@
+<div class="header bg-gradient-danger pb-8 pt-2 pt-md-5"></div>
+<div class="container-fluid mt--7">
+  <div class="row">
+    <div class="col-xl-12 mb-3 mb-xl-0">
+      <div class="card bg-gradient-default shadow">
+        <div class="row">
+          <div class="col-md-2">
+            <div *ngIf="avatar; else noAvatar">
+              <img
+                class="profile"
+                src="{{ userInfo.avatar_url }}"
+                alt="Meu avatar"
+              />
+              <div class="image-upload">
+                <label for="file">
+                  <i
+                    class="fas fa-camera"
+                    style="font-size: 30px; cursor: pointer;"
+                  ></i>
+                </label>
+
+                <input id="file" type="file" (change)="onFileSelected($event)" />
+              </div>
+            </div>
+            <ng-template #noAvatar>
+              <img
+                class="profile"
+                src="../../../../../assets/img/default-avatar.jpg"
+                alt=""
+              />
+            </ng-template>
+
+            <div class="profile-background-image__image-container">
+              <img
+                class="profile-background-image__image-container"
+                src="../../../assets/img/dark-material-bg.png"
+                alt="title-image"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row m-3">
+          <div class="col-md-12" align="center">
+            <span style="font-weight: bold; font-size: 20px;"
+              >{{ userInfo?.firstName }} {{ userInfo?.lastName }}</span
+            ><br />
+            <div *ngIf="title; else isTitle">
+              <span style="font-size: 18px; color: gray;">{{
+                userInfo?.title
+              }}</span>
+            </div>
+            <ng-template #isTitle>
+              O usuário está sem um título.
+            </ng-template>
+            <hr />
+          </div>
+          <div class="col-md-12" align="right">
+            <i
+              title="Editar Perfil"
+              class="fas fa-edit"
+              (click)="openEditProfile(edit_profile)"
+            ></i>
+          </div>
+          <div class="col-md-12">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-10">
+                  <div *ngIf="linkedin; else noLinkedin">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="{{ userInfo?.linkedin }}" target="_blank">{{
+                      userInfo?.linkedin
+                    }}</a>
+                  </div>
+                  <ng-template #noLinkedin>
+                    <i class="fab fa-linkedin"></i>
+                    <span class="info-perfil"
+                      >Edite seu perfil para adicionar o linkedin.</span
+                    >
+                  </ng-template>
+                </div>
+              </div>
+              <br />
+              <div class="row">
+                <div class="col-md-10">
+                  <div *ngIf="github; else noGithub">
+                    <i class="fab fa-github-square"></i>
+                    <a href="{{ userInfo?.github }}" target="_blank">{{
+                      userInfo?.github
+                    }}</a>
+                  </div>
+                </div>
+              </div>
+              <ng-template #noGithub>
+                <i class="fab fa-github-square"></i>
+                <span class="info-perfil">
+                  Edite seu perfil para adicionar o gitHub.</span
+                >
+              </ng-template>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="card-title mb-1 ml-3">
+          Sobre
+        </div>
+        <div class="row justify-content-center m-3" *ngIf="bio; else noBio">
+          <p class="info-perfil-bio">
+            {{ userInfo?.bio }}
+          </p>
+        </div>
+        <div class="row">
+          <ng-template #noBio>
+            <span class="info-perfil-bio">
+              Insira aqui um breve comentário sobre sua biográfia.</span
+            >
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #edit_profile>
+  <app-edit-perfil  (user)="getUserById()" (user)="closeToEditModal()" [userId]="userId" [userInfo]="userInfo"></app-edit-perfil>
+</ng-template>

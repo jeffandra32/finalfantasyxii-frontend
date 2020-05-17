@@ -1,0 +1,110 @@
+<nav class="navbar navbar-vertical navbar-expand-md" id="sidenav-main">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <img class="icon-img" src="../../../../assets/img/logo02.png" alt="icon-sidebar">
+    </div>
+   
+    <!-- Toggler -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      (click)="isCollapsed = !isCollapsed"
+      aria-controls="sidenav-collapse-main"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Brand -->
+   
+    <div
+      class="collapse navbar-collapse"
+      [ngbCollapse]="isCollapsed"
+      id="sidenav-collapse-main"
+    >
+      <!-- Collapse header -->
+      <div class="navbar-collapse-header d-md-none">
+        <div class="row">
+          <div class="col-6 collapse-brand">
+            <a routerLinkActive="active" [routerLink]="['/dashboard']">
+              <img src="./assets/img/brand/blue.png" />
+            </a>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Navigation -->
+      <ul class="navbar-nav mb-md-3">
+        <li class="nav-item">
+          <hr>
+          <a
+            class="nav-link"
+            href="https://homeoffice.indrabrasil.com.br/doc/manual/index.html"
+            target="_blanck"
+          >
+           <img src="../../../../assets/img/icons/Item-Elixir.png" alt="Equipamentos">
+            Home
+          </a>
+          <hr>
+        </li>
+       
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://homeoffice.indrabrasil.com.br/doc/manual/index.html"
+            target="_blanck"
+          >
+           <img src="../../../../assets/img/icons/Mystic-Helm.png" alt="Equipamentos">
+            Personagens
+          </a>
+          <hr>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://homeoffice.indrabrasil.com.br/doc/manual/index.html"
+            target="_blanck"
+          >
+           <img src="../../../../assets/img/icons/Sword-2H.png" alt="Equipamentos">
+            Equipamentos
+          </a>
+          <hr>
+        </li>
+       
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://homeoffice.indrabrasil.com.br/doc/manual/index.html"
+            target="_blanck"
+          >
+           <img src="../../../../assets/img/icons/Arrows.png" alt="Equipamentos">
+            Hunters/Rare Games
+          </a>
+          <hr>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://homeoffice.indrabrasil.com.br/doc/manual/index.html"
+            target="_blanck"
+          >
+           <img src="../../../../assets/img/icons/Item-Herb.png" alt="Equipamentos">
+            Itens
+          </a>
+          <hr>
+        </li>
+       
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://homeoffice.indrabrasil.com.br/doc/manual/index.html"
+            target="_blanck"
+          >
+           <img src="../../../../assets/img/icons/Loot.png" alt="Equipamentos">
+            Loots/Bazzar
+          </a>
+          <hr>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
