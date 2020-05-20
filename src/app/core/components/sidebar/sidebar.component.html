@@ -22,15 +22,7 @@
       id="sidenav-collapse-main"
     >
       <!-- Collapse header -->
-      <div class="navbar-collapse-header d-md-none">
-        <div class="row">
-          <div class="col-6 collapse-brand">
-            <a routerLinkActive="active" [routerLink]="['/dashboard']">
-              <img src="./assets/img/brand/blue.png" />
-            </a>
-          </div>
-        </div>
-      </div>
+
     
       <!-- Navigation -->
       <ul class="navbar-nav mb-md-3">
@@ -58,9 +50,8 @@
         </li>
         <li class="nav-item">
           <a
-            class="nav-link"
-            href="https://homeoffice.indrabrasil.com.br/doc/manual/index.html"
-            target="_blanck"
+          class="nav-link"
+          [routerLink]="['/admin/weapons']" routerLinkActive="router-link-active" 
           >
            <img src="../../../../assets/img/icons/Sword-2H.png" alt="Equipamentos">
             Equipamentos

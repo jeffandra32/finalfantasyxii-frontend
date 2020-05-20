@@ -16437,8 +16437,7 @@ textarea[resize="horizontal"] {
   .navbar-collapse .navbar-collapse-header {
     display: block;
     margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    
   }
   .navbar-collapse .collapse-brand img {
     height: 36px;
@@ -16451,7 +16450,7 @@ textarea[resize="horizontal"] {
     padding: 1.5rem;
     animation: show-navbar-collapse 0.2s ease forwards;
     border-radius: 0.375rem;
-    background: #fff;
+    background: #359fd9;
     box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1), 0 15px 35px rgba(50, 50, 93, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
   }
   .navbar-collapse.collapsing-out {
