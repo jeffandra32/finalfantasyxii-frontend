@@ -11,7 +11,7 @@ export const AdminLayoutRoutes: Routes = [
     loadChildren: () => import('../../pages/characters/characters.module').then(p => p.CharactersModule),
   },
   {
-    path: 'weapons',
-    loadChildren: () => import('../../pages/weapons/weapons.module').then(w => w.WeaponsModule),
+    path: 'equipment',
+    loadChildren: () => import('../../pages/equipment/equipment.module').then(w => w.EquipmentModule),
   },
 ];

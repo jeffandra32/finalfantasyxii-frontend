@@ -1,0 +1,112 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="input-group input-group-alternative">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fas fa-search"></i></span>
+        </div>
+        <input
+          class="form-control"
+          placeholder="Procurar..."
+          type="text"
+          [(ngModel)]="query"
+          id="listSearch"
+          [ngModelOptions]="{ standalone: true }"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <!-- Loading -->
+      <div
+        id="cards"
+        *ngFor="let weapon of weaponsList | searchProcess: query"
+      >
+        <figure class="card card--water">
+          <div class="card__image-container"></div>
+          <div class="row m-2">
+            <div class="col-md-8">
+              <img src="../../../../assets/img/icons/Sword-1H.png" alt="" />
+              <span class="card__name">{{ weapon.name }}</span>
+            </div>
+          </div>
+
+          <figcaption class="card__caption">
+            <div class="row">
+              <div
+                class="col-md-4"
+                style="border-right: solid 1px rgba(128, 128, 128, 0.267);"
+              >
+                <table class="card__stats">
+                  <tbody>
+                    <tr>
+                      <th>Attack</th>
+                      <td>{{ weapon.attack }}</td>
+                    </tr>
+                    <tr>
+                      <th>Evade</th>
+                      <td>{{ weapon.evade }}</td>
+                    </tr>
+
+                    <tr>
+                      <th>Combo Chance</th>
+                      <td>{{ weapon.combo }}%</td>
+                    </tr>
+
+                    <tr *ngIf="weapon.effects">
+                      <th>Effects</th>
+                      <td>{{ weapon.effects }}</td>
+                    </tr>
+                    <tr>
+                      <br />
+                    </tr>
+                    <tr *ngIf="weapon.license">
+                      <th>License</th>
+                      <td>{{ weapon.license }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-md-8">
+                <table class="card__stats">
+                  <tbody>
+                    <tr *ngIf="weapon.stolen">
+                      <th>Stolen</th>
+                      <td>{{ weapon.stolen }}</td>
+                    </tr>
+                    <tr *ngIf="weapon.drops">
+                      <th>Drop</th>
+                      <td>{{ weapon.drops }}</td>
+                    </tr>
+                    <tr>
+                      <br />
+                    </tr>
+                    <tr *ngIf="weapon.purchased">
+                      <th>Purchased</th>
+                      <td>{{ weapon.purchased }}</td>
+                    </tr>
+
+                    <tr *ngIf="weapon.treasure">
+                      <th>Treasure</th>
+                      <td>
+                        {{ weapon.treasure }}
+                      </td>
+                    </tr>
+                    <tr *ngIf="weapon.find">
+                      <th>Find</th>
+                      <td>
+                        {{ weapon.find }}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>

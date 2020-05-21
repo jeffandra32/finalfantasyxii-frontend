@@ -13,9 +13,10 @@ $sm: 20rem;
 $med: 48rem;
 $lg: 64rem;
 
-.bg-gradient-danger {
-    border-top: solid 5px #06496d;
-    background: linear-gradient(87deg, #fdd190 0, #f4a6a4 100%) !important;
+img {
+    height: 30px;
+    margin-bottom: 10px;
+    margin-right: 5px;
 }
 
 h1,
@@ -84,10 +85,16 @@ span {
         margin: 1em 0;
         width: 100%;
 
-        th,
+        th {
+            padding: 0.25em 0.5em 0;
+            color: #06496d;
+            font-size: 14px;
+        }
         td {
             padding: 0.25em 0.5em 0;
             color: #06496d;
+            font-size: 14px;
+            text-align: justify;
         }
     }
 

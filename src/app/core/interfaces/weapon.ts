@@ -1,6 +1,7 @@
 export interface WeaponDTO {
   id: number;
   name: string;
+  type: string;
   attack: number;
   evade: number;
   combo: number;

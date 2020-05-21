@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, retry } from 'rxjs/operators';
 
 import { AppConstants } from '../constants/shared.constants';
@@ -11,7 +11,7 @@ import { environment } from '../../../environments/environment';
 @Injectable({
   providedIn: 'root',
 })
-export class WeaponService {
+export class EquipmentService {
   baseHttpHeader: HttpHeaders;
   baseURL: string;
   pathEndpoint: string;

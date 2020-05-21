@@ -1,9 +1,13 @@
 <nav class="navbar navbar-vertical navbar-expand-md" id="sidenav-main">
   <div class="container-fluid">
     <div class="row justify-content-center">
-      <img class="icon-img" src="../../../../assets/img/logo02.png" alt="icon-sidebar">
+      <img
+        class="icon-img"
+        src="../../../../assets/img/logo02.png"
+        alt="icon-sidebar"
+      />
     </div>
-   
+
     <!-- Toggler -->
     <button
       class="navbar-toggler"
@@ -15,60 +19,72 @@
     </button>
 
     <!-- Brand -->
-   
+
     <div
       class="collapse navbar-collapse"
       [ngbCollapse]="isCollapsed"
       id="sidenav-collapse-main"
     >
-      <!-- Collapse header -->
-
-    
       <!-- Navigation -->
       <ul class="navbar-nav mb-md-3">
         <li class="nav-item">
-          <hr>
+          <hr />
           <a
             class="nav-link"
-            [routerLink]="['/admin/home']" routerLinkActive="router-link-active" 
+            [routerLink]="['/admin/home']"
+            routerLinkActive="router-link-active"
           >
-           <img src="../../../../assets/img/icons/Item-Elixir.png" alt="Equipamentos">
+            <img
+              src="../../../../assets/img/icons/Item-Elixir.png"
+              alt="Equipamentos"
+            />
             Home
           </a>
-          <hr>
+          <hr />
         </li>
-       
+
         <li class="nav-item">
           <a
             class="nav-link"
-            [routerLink]="['/admin/characters']" routerLinkActive="router-link-active" 
+            [routerLink]="['/admin/characters']"
+            routerLinkActive="router-link-active"
           >
-           <img src="../../../../assets/img/icons/Mystic-Helm.png" alt="Equipamentos">
+            <img
+              src="../../../../assets/img/icons/Mystic-Helm.png"
+              alt="Equipamentos"
+            />
             Personagens
           </a>
-          <hr>
+          <hr />
         </li>
         <li class="nav-item">
           <a
-          class="nav-link"
-          [routerLink]="['/admin/weapons']" routerLinkActive="router-link-active" 
+            class="nav-link"
+            [routerLink]="['/admin/equipment']"
+            routerLinkActive="router-link-active"
           >
-           <img src="../../../../assets/img/icons/Sword-2H.png" alt="Equipamentos">
+            <img
+              src="../../../../assets/img/icons/Sword-2H.png"
+              alt="Equipamentos"
+            />
             Equipamentos
           </a>
-          <hr>
+          <hr />
         </li>
-       
+
         <li class="nav-item">
           <a
             class="nav-link"
             href="https://homeoffice.indrabrasil.com.br/doc/manual/index.html"
             target="_blanck"
           >
-           <img src="../../../../assets/img/icons/Arrows.png" alt="Equipamentos">
+            <img
+              src="../../../../assets/img/icons/Arrows.png"
+              alt="Equipamentos"
+            />
             Hunters/Rare Games
           </a>
-          <hr>
+          <hr />
         </li>
         <li class="nav-item">
           <a
@@ -76,22 +92,28 @@
             href="https://homeoffice.indrabrasil.com.br/doc/manual/index.html"
             target="_blanck"
           >
-           <img src="../../../../assets/img/icons/Item-Herb.png" alt="Equipamentos">
+            <img
+              src="../../../../assets/img/icons/Item-Herb.png"
+              alt="Equipamentos"
+            />
             Itens
           </a>
-          <hr>
+          <hr />
         </li>
-       
+
         <li class="nav-item">
           <a
             class="nav-link"
             href="https://homeoffice.indrabrasil.com.br/doc/manual/index.html"
             target="_blanck"
           >
-           <img src="../../../../assets/img/icons/Loot.png" alt="Equipamentos">
+            <img
+              src="../../../../assets/img/icons/Loot.png"
+              alt="Equipamentos"
+            />
             Loots/Bazzar
           </a>
-          <hr>
+          <hr />
         </li>
       </ul>
     </div>
