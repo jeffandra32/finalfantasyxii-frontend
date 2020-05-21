@@ -14,4 +14,8 @@ export const AdminLayoutRoutes: Routes = [
     path: 'equipment',
     loadChildren: () => import('../../pages/equipment/equipment.module').then(w => w.EquipmentModule),
   },
+  {
+    path: 'espers',
+    loadChildren: () => import('../../pages/esper/espers.module').then(e => e.EspersModule),
+  },
 ];

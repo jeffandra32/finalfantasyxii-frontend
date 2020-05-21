@@ -8,9 +8,10 @@ import { NgModule } from '@angular/core';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { SearchProcessPipe } from './pipes/filter-list-process';
 import { WeaponsSwordComponent } from './components/weapons-sword/weapons-sword.component';
+import { EspersDetailsComponent } from './components/espers/espers-details/espers-details.component';
 
 @NgModule({
-  declarations: [LoadingComponent, WeaponsSwordComponent, SearchProcessPipe, GreatSwordsComponent],
+  declarations: [LoadingComponent, WeaponsSwordComponent, SearchProcessPipe, GreatSwordsComponent, EspersDetailsComponent],
   imports: [
     CommonModule,
     ModalModule.forRoot(),

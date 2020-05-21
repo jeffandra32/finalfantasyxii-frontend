@@ -10,7 +10,13 @@
     <!-- User -->
     <ul class="navbar-nav align-items-center d-none d-md-flex">
       <li>
-        <i class="fas fa-bell"></i>
+        <a
+          class="nav-link"
+          [routerLink]="['/database/home']"
+          routerLinkActive="router-link-active"
+        >
+          <i class="fas fa-home"></i>
+        </a>
       </li>
       <li class="nav-item" ngbDropdown placement="bottom-right">
         <a class="nav-link pr-0" role="button" ngbDropdownToggle>

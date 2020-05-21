@@ -1,13 +1,5 @@
 <nav class="navbar navbar-vertical navbar-expand-md" id="sidenav-main">
   <div class="container-fluid">
-    <div class="row justify-content-center">
-      <img
-        class="icon-img"
-        src="../../../../assets/img/logo02.png"
-        alt="icon-sidebar"
-      />
-    </div>
-
     <!-- Toggler -->
     <button
       class="navbar-toggler"
@@ -28,25 +20,9 @@
       <!-- Navigation -->
       <ul class="navbar-nav mb-md-3">
         <li class="nav-item">
-          <hr />
           <a
             class="nav-link"
-            [routerLink]="['/admin/home']"
-            routerLinkActive="router-link-active"
-          >
-            <img
-              src="../../../../assets/img/icons/Item-Elixir.png"
-              alt="Equipamentos"
-            />
-            Home
-          </a>
-          <hr />
-        </li>
-
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            [routerLink]="['/admin/characters']"
+            [routerLink]="['/database/characters']"
             routerLinkActive="router-link-active"
           >
             <img
@@ -57,10 +33,37 @@
           </a>
           <hr />
         </li>
+
         <li class="nav-item">
           <a
             class="nav-link"
-            [routerLink]="['/admin/equipment']"
+            [routerLink]="['/database/espers']"
+            routerLinkActive="router-link-active"
+          >
+            <img
+              src="../../../../assets/img/icons/Esper_05.png"
+              alt="Hunters"
+            />
+            Espers
+          </a>
+          <hr />
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/database/hunters']"
+            routerLinkActive="router-link-active"
+          >
+            <img src="../../../../assets/img/icons/Arrows.png" alt="Hunters" />
+            Hunters
+          </a>
+          <hr />
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/database/equipment']"
             routerLinkActive="router-link-active"
           >
             <img
@@ -72,20 +75,6 @@
           <hr />
         </li>
 
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            href="https://homeoffice.indrabrasil.com.br/doc/manual/index.html"
-            target="_blanck"
-          >
-            <img
-              src="../../../../assets/img/icons/Arrows.png"
-              alt="Equipamentos"
-            />
-            Hunters/Rare Games
-          </a>
-          <hr />
-        </li>
         <li class="nav-item">
           <a
             class="nav-link"
@@ -108,10 +97,70 @@
             target="_blanck"
           >
             <img
+              src="../../../../assets/img/icons/Technick.png"
+              alt="Equipamentos"
+            />
+            Tecnickes
+          </a>
+          <hr />
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://homeoffice.indrabrasil.com.br/doc/manual/index.html"
+            target="_blanck"
+          >
+            <img
+              src="../../../../assets/img/icons/magick.png"
+              alt="Equipamentos"
+            />
+            Magick
+          </a>
+          <hr />
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="https://homeoffice.indrabrasil.com.br/doc/manual/index.html"
+            target="_blanck"
+          >
+            <img
               src="../../../../assets/img/icons/Loot.png"
               alt="Equipamentos"
             />
             Loots/Bazzar
+          </a>
+          <hr />
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/database/trial-mode']"
+            routerLinkActive="router-link-active"
+          >
+            <img
+              src="../../../../assets/img/icons/Heavy-Helm.png"
+              alt="Equipamentos"
+            />
+            Trial Mode
+          </a>
+          <hr />
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/database/side-quest']"
+            routerLinkActive="router-link-active"
+          >
+            <img
+              src="../../../../assets/img/icons/Item-Elixir.png"
+              alt="Equipamentos"
+            />
+            Side Quests
           </a>
           <hr />
         </li>
