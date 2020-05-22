@@ -1,17 +1,23 @@
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { BeliasDetailsComponent } from './components/espers/belias/belias-details.component';
 import { CommonModule } from '@angular/common';
-import { GreatSwordsComponent } from './components/great-swords/great-swords.component';
+import { GreatSwordsComponent } from './components/equipments/great-swords/great-swords.component';
 import { LoadingComponent } from './loading/loading.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { NgModule } from '@angular/core';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { SearchProcessPipe } from './pipes/filter-list-process';
-import { WeaponsSwordComponent } from './components/weapons-sword/weapons-sword.component';
-import { EspersDetailsComponent } from './components/espers/espers-details/espers-details.component';
+import { WeaponsSwordComponent } from './components/equipments/weapons-sword/weapons-sword.component';
 
 @NgModule({
-  declarations: [LoadingComponent, WeaponsSwordComponent, SearchProcessPipe, GreatSwordsComponent, EspersDetailsComponent],
+  declarations: [
+    LoadingComponent,
+    WeaponsSwordComponent,
+    SearchProcessPipe,
+    GreatSwordsComponent,
+    BeliasDetailsComponent,
+  ],
   imports: [
     CommonModule,
     ModalModule.forRoot(),
@@ -19,6 +25,11 @@ import { EspersDetailsComponent } from './components/espers/espers-details/esper
     FormsModule,
     ReactiveFormsModule,
   ],
-  exports: [LoadingComponent, WeaponsSwordComponent, GreatSwordsComponent],
+  exports: [
+    LoadingComponent,
+    WeaponsSwordComponent,
+    GreatSwordsComponent,
+    BeliasDetailsComponent,
+  ],
 })
 export class SharedModule {}

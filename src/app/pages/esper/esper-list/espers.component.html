@@ -11,12 +11,37 @@
         role="tab"
         aria-controls="weapon"
         aria-selected="true"
-        ><img
-          src="../../../assets/img/icons/Esper_01.png"
-          alt="nav-sword"
-        />1 - 9</a
+        >Belias</a
       >
     </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="mateus-tab"
+        data-toggle="tab"
+        href="#mateus"
+        role="tab"
+        aria-controls="mateus"
+        aria-selected="true"
+        >Mateus</a
+      >
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="adrammelesh-tab"
+        data-toggle="tab"
+        href="#adrammelesh"
+        role="tab"
+        aria-controls="adrammelesh"
+        aria-selected="true"
+        >Adrammelesh</a
+      >
+    </li>
+
+
     <li class="nav-item">
       <a
         class="nav-link"
@@ -26,12 +51,64 @@
         role="tab"
         aria-controls="greatswords"
         aria-selected="true"
-        ><img
-          src="../../../assets/img/icons/Esper_02.png"
-          alt="nav-sword"
-        />10 - 19</a
+        >Cúchulainn</a
       >
     </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="zeromus-tab"
+        data-toggle="tab"
+        href="#zeromus"
+        role="tab"
+        aria-controls="zeromus"
+        aria-selected="true"
+        >Zeromus</a
+      >
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="zalera-tab"
+        data-toggle="tab"
+        href="#zalera"
+        role="tab"
+        aria-controls="zalera"
+        aria-selected="true"
+        >Zalera</a
+      >
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="caos-tab"
+        data-toggle="tab"
+        href="#caos"
+        role="tab"
+        aria-controls="caos"
+        aria-selected="true"
+        >Caos</a
+      >
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="hashmal-tab"
+        data-toggle="tab"
+        href="#hashmal"
+        role="tab"
+        aria-controls="hashmal"
+        aria-selected="true"
+        >Hashmal</a
+      >
+    </li>
+
+   
+
     <li class="nav-item">
       <a
         class="nav-link"
@@ -41,10 +118,7 @@
         role="tab"
         aria-controls="katana"
         aria-selected="true"
-        ><img
-          src="../../../../assets/img/icons/Esper_03.png"
-          alt="nav-katana"
-        />20 - 29</a
+        >Shemhazai</a
       >
     </li>
     <li class="nav-item">
@@ -56,23 +130,47 @@
         role="tab"
         aria-controls="ninja"
         aria-selected="true"
-        ><img
-          src="../../../../assets/img/icons/Esper_04.png"
-          alt="nav-ninja"
-        />30 - 39</a
+        >Exodo</a
       >
     </li>
+   
+
     <li class="nav-item">
       <a
         class="nav-link"
-        id="spears-tab"
+        id="famfrit-tab"
         data-toggle="tab"
-        href="#spears"
+        href="#famfrit"
         role="tab"
-        aria-controls="spears"
+        aria-controls="famfrit"
         aria-selected="true"
-        ><img src="../../../../assets/img/icons/Esper_05.png" alt="nav-ninja" />40
-        - 45</a
+        >Famfrit</a
+      >
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="ultima-tab"
+        data-toggle="tab"
+        href="#ultima"
+        role="tab"
+        aria-controls="ultima"
+        aria-selected="true"
+        >Ultima</a
+      >
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="zordiark-tab"
+        data-toggle="tab"
+        href="#zordiark"
+        role="tab"
+        aria-controls="zordiark"
+        aria-selected="true"
+        >Zordiark</a
       >
     </li>
   </ul>
@@ -87,13 +185,11 @@
       aria-labelledby="weapon-tab"
     >
       <div class="container m-2">
-        <h2>One-Handed Swords</h2>
         <h4>
-          One-handed Swords are the primary weapons of the Knight, Time
-          Battlemage and Bushi job classes.
+          {{esperBeliasDetails[0].description}}
         </h4>
       </div>
-     Aqui
+     <app-belias-details [esperBeliasDetails]="esperBeliasDetails"></app-belias-details>
     </div>
   </div>
 </div>

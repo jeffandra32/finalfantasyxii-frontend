@@ -20,15 +20,12 @@
   <div class="row justify-content-center">
     <div class="col-md-10">
       <!-- Loading -->
-      <div
-        id="cards"
-        *ngFor="let weapon of weaponsList | searchProcess: query"
-      >
-        <figure class="card card--water">
+      <div id="cards" *ngFor="let weapon of greateSwordList | searchProcess: query">
+        <figure class="card card--normal">
           <div class="card__image-container"></div>
           <div class="row m-2">
             <div class="col-md-8">
-              <img src="../../../../assets/img/icons/Sword-1H.png" alt="" />
+              <img src="../../../../assets/img/icons/Sword-2H.png" alt="" />
               <span class="card__name">{{ weapon.name }}</span>
             </div>
           </div>

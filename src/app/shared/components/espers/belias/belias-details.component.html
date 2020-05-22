@@ -1,0 +1,110 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <!-- Loading -->
+      <div id="cards" *ngFor="let esper of esperBeliasDetails">
+        <figure class="card card--normal">
+          <div class="card__image-container"></div>
+          <div class="row m-2">
+            <div class="col-md-4">
+              <img src="../../../../assets/img/icons/Esper_01.png" class="img-esper" alt="Belias" />
+            </div>
+            <div class="col-md-8">
+              <span class="card__name">{{ esper.name }}</span>
+            </div>
+          </div>
+
+          <figcaption class="card__caption">
+            <div class="row">
+              <div
+                class="col-md-6"
+                style="border-right: solid 1px rgba(128, 128, 128, 0.267);"
+              >
+                <table class="card__stats">
+                  <tbody>
+                    <tr>
+                      <th>Level</th>
+                      <td>{{ esper.level }}</td>
+                    </tr>
+                    <tr>
+                      <th>HP</th>
+                      <td>{{ esper.hp }}</td>
+                    </tr>
+
+                    <tr>
+                      <th>Steal</th>
+                      <td>{{ esper.steal }}%</td>
+                    </tr>
+                    <tr>
+                      <br />
+                    </tr>
+                    <tr>
+                      <th>Quickenings</th>
+                      <td>
+                        <i
+                          class="fas fa-fire"
+                          style="
+                            color: red;
+                            font-size: 20px;
+                            margin-right: 5px;
+                          "
+                        ></i
+                        >{{ esper.attack }}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-md-6">
+                <table class="card__stats">
+                  <tbody>
+                    <tr *ngIf="esper.location">
+                      <th>location</th>
+                      <td>{{ esper.location }}</td>
+                    </tr>
+                    <tr>
+                      <br />
+                    </tr>
+                    <tr *ngIf="esper.lockedlicense">
+                      <th>Locked license</th>
+                      <td>{{ esper.lockedlicense }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-md-12 mb-2">
+                <img
+                  src="{{ esper.avatar }}"
+                  class="img-responsive"
+                  alt="Belias"
+                />
+              </div>
+              <div class="col-md-12">
+                <p>
+                  Belias é um Esper, o primeiro que você encontrou até agora, e
+                  ele é responsável por guardar o Dawn Shard. Ele é um Esper
+                  baseado no fogo e a maior parte de seu dano virá de feitiços
+                  mágicos baseados no fogo. Não use Magick baseado em
+                  fogo, como Fogo, pois ele irá curá-lo, em vez de causar dano.
+                  O feitiço de maior efeito contra ele é o Aqua. Belias é
+                  suscetível a Slow, por isso tente infligi-lo logo no início da
+                  luta.
+                </p>
+                <p>
+                  Você também deve lançar a <img class="img-magick" src="../../../../../assets/img/icons/White-Magick.png" alt="Shell"> <strong>Shell</strong> em cada membro do seu grupo
+                  para minimizar a quantidade de dano causado e não se esqueça
+                  de remover o Efeito do status do óleo se algum membro do seu
+                  grupo estiver aflito pois isso causará um aumento no dano
+                  causado por ataques baseados no fogo. Seu feitiço Firaja tem a
+                  chance de infligir o status Óleo efeito.
+                </p>
+              </div>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
