@@ -9,7 +9,7 @@ import { WeaponDTO } from '../../../../core/interfaces/weapon';
 })
 export class GreatSwordsComponent {
 
-  @Input() greateSwordList: WeaponDTO[] = [];
+  @Input() greatSwordList: WeaponDTO[] = [];
 
   constructor() {}
 }

@@ -29,8 +29,6 @@ export class CharactersComponent implements OnInit {
   ngOnInit() {
     this.images.map((res) => {
       this.imagePath.push(res);
-      console.log(this.imagePath, 'this.imagePath');
-      
     });
   }
 

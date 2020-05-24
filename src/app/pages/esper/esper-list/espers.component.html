@@ -1,15 +1,15 @@
-<div class="header bg-gradient-danger pb-3 pt-2 pt-md-6"></div>
+<div class="header bg-gradient-danger pb-3 pt-2 pt-md-5"></div>
 
 <div class="container mt-2">
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item">
       <a
         class="nav-link active"
-        id="weapon-tab"
+        id="belias-tab"
         data-toggle="tab"
-        href="#weapon"
+        href="#belias"
         role="tab"
-        aria-controls="weapon"
+        aria-controls="belias"
         aria-selected="true"
         >Belias</a
       >
@@ -31,16 +31,15 @@
     <li class="nav-item">
       <a
         class="nav-link"
-        id="adrammelesh-tab"
+        id="adrammelech-tab"
         data-toggle="tab"
-        href="#adrammelesh"
+        href="#adrammelech"
         role="tab"
-        aria-controls="adrammelesh"
+        aria-controls="adrammelech"
         aria-selected="true"
         >Adrammelesh</a
       >
     </li>
-
 
     <li class="nav-item">
       <a
@@ -107,8 +106,6 @@
       >
     </li>
 
-   
-
     <li class="nav-item">
       <a
         class="nav-link"
@@ -133,7 +130,6 @@
         >Exodo</a
       >
     </li>
-   
 
     <li class="nav-item">
       <a
@@ -177,19 +173,55 @@
 
   <!-- TAB_CONTENT -->
   <div class="tab-content" id="myTabContent">
-    <!-- SWORD -->
+    <!-- BELIAS -->
     <div
       class="tab-pane fade show active"
-      id="weapon"
+      id="belias"
       role="tabpanel"
-      aria-labelledby="weapon-tab"
+      aria-labelledby="belias-tab"
     >
       <div class="container m-2">
         <h4>
-          {{esperBeliasDetails[0].description}}
+          {{ esperBeliasDesc }}
         </h4>
       </div>
-     <app-belias-details [esperBeliasDetails]="esperBeliasDetails"></app-belias-details>
+      <app-belias-details
+        [esperBeliasDetails]="esperBeliasDetails"
+      ></app-belias-details>
+    </div>
+
+    <!-- MATEUS -->
+    <div
+      class="tab-pane fade"
+      id="mateus"
+      role="tabpanel"
+      aria-labelledby="mateus-tab"
+    >
+      <div class="container m-2">
+        <h4>
+          {{ esperMateusDesc }}
+        </h4>
+      </div>
+      <app-mateus-details
+        [esperMateusDetails]="esperMateusDetails"
+      ></app-mateus-details>
+    </div>
+
+    <!-- ADRAMMELECH -->
+    <div
+      class="tab-pane fade"
+      id="adrammelech"
+      role="tabpanel"
+      aria-labelledby="adrammelech-tab"
+    >
+      <div class="container m-2">
+        <h4>
+          {{ esperAdrammelechDesc }}
+        </h4>
+      </div>
+      <app-adrammelech-details
+        [esperAdrammelechDetails]="esperAdrammelechDetails"
+      ></app-adrammelech-details>
     </div>
   </div>
 </div>

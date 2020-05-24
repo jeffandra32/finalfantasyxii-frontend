@@ -10,7 +10,7 @@ import { WeaponDTO } from './../../../core/interfaces/weapon';
 })
 export class EquipmentListComponent implements OnInit {
   swordList: WeaponDTO[] = [];
-  greateSwordList: WeaponDTO[] = [];
+  greatSwordList: WeaponDTO[] = [];
 
   constructor(private equipmentService: EquipmentService) {}
 
@@ -24,7 +24,7 @@ export class EquipmentListComponent implements OnInit {
    */
   getAllWeapons(): void {
     const swordList: WeaponDTO[] = [];
-    const greateSwordList: WeaponDTO[] = [];
+    const greatSwordList: WeaponDTO[] = [];
     this.equipmentService.getAllWeapons().subscribe(
       (weapons: any) => {
         weapons.map((res: WeaponDTO) => {
@@ -33,11 +33,11 @@ export class EquipmentListComponent implements OnInit {
           }
 
           if (res.type === 'greatswords') {
-            greateSwordList.push(res);
+            greatSwordList.push(res);
           }
         }),
           (this.swordList = swordList);
-        this.greateSwordList = greateSwordList;
+        this.greatSwordList = greatSwordList;
       },
       (err) => {
         console.log(err);
