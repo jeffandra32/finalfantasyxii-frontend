@@ -46,24 +46,24 @@
                       <td>{{ weapon.attack }}</td>
                     </tr>
                     <tr>
-                      <th>Evade</th>
+                      <th>Evasiva</th>
                       <td>{{ weapon.evade }}</td>
                     </tr>
 
                     <tr>
-                      <th>Combo Chance</th>
+                      <th>Chance de Combo</th>
                       <td>{{ weapon.combo }}%</td>
                     </tr>
 
                     <tr *ngIf="weapon.effects">
-                      <th>Effects</th>
+                      <th>Efeito</th>
                       <td>{{ weapon.effects }}</td>
                     </tr>
                     <tr>
                       <br />
                     </tr>
                     <tr *ngIf="weapon.license">
-                      <th>License</th>
+                      <th>Licensa</th>
                       <td>{{ weapon.license }}</td>
                     </tr>
                   </tbody>
@@ -73,7 +73,7 @@
                 <table class="card__stats">
                   <tbody>
                     <tr *ngIf="weapon.stolen">
-                      <th>Stolen</th>
+                      <th>Roubado</th>
                       <td>{{ weapon.stolen }}</td>
                     </tr>
                     <tr *ngIf="weapon.drops">
@@ -84,18 +84,18 @@
                       <br />
                     </tr>
                     <tr *ngIf="weapon.purchased">
-                      <th>Purchased</th>
+                      <th>Comprado</th>
                       <td>{{ weapon.purchased }}</td>
                     </tr>
 
                     <tr *ngIf="weapon.treasure">
-                      <th>Treasure</th>
+                      <th>Tesouro</th>
                       <td>
                         {{ weapon.treasure }}
                       </td>
                     </tr>
                     <tr *ngIf="weapon.find">
-                      <th>Find</th>
+                      <th>Localização</th>
                       <td>
                         {{ weapon.find }}
                       </td>

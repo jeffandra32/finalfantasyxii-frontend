@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="input-group input-group-alternative">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fas fa-search"></i></span>
+        </div>
+        <input
+          class="form-control"
+          placeholder="Procurar..."
+          type="text"
+          [(ngModel)]="query"
+          id="listSearch"
+          [ngModelOptions]="{ standalone: true }"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <!-- Loading -->
+      <div id="cards" *ngFor="let item of itemsList | searchProcess: query">
+        <figure class="card card--water">
+          <div class="card__image-container"></div>
+          <div class="row m-2">
+            <div class="col-md-4">
+              <img src="{{item.icon}}" class="img-item" alt="Items-icon" />
+            </div>
+            <div class="col-md-8">
+              <span class="card__name">{{ item.name }}</span>
+            </div>
+          </div>
+
+          <figcaption class="card__caption">
+            <div class="row">
+              <div
+                class="col-md-12"
+                style="border-right: solid 1px rgba(128, 128, 128, 0.267);"
+              >
+                <table class="card__stats">
+                  <tbody>
+                    <tr>
+                      <th>Efeito:</th>
+                      <td>{{ item.effect }}</td>
+                    </tr>
+                    <tr *ngIf="item.addEffect">
+                      <br />
+                    </tr>
+                    <tr *ngIf="item.addEffect">
+                      <th>Adicional:</th>
+                      <td>{{ item.addEffect }}</td>
+                    </tr>
+                    <tr>
+                      <br />
+                    </tr>
+                    <tr>
+                      <th>Localização:</th>
+                      <td>{{ item.location }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>

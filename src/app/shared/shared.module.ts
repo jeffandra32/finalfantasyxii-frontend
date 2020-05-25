@@ -4,6 +4,7 @@ import { AdrammelechDetailsComponent } from './components/espers/adrammelech-det
 import { BeliasDetailsComponent } from './components/espers/belias/belias-details.component';
 import { CommonModule } from '@angular/common';
 import { GreatSwordsComponent } from './components/equipments/great-swords/great-swords.component';
+import { ItemsDetailsComponent } from './components/items-loots/items-details/items-details.component';
 import { LoadingComponent } from './loading/loading.component';
 import { MateusDetailsComponent } from './components/espers/mateus/mateus-details.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
@@ -21,6 +22,7 @@ import { WeaponsSwordComponent } from './components/equipments/weapons-sword/wea
     BeliasDetailsComponent,
     MateusDetailsComponent,
     AdrammelechDetailsComponent,
+    ItemsDetailsComponent,
   ],
   imports: [
     CommonModule,
@@ -35,7 +37,8 @@ import { WeaponsSwordComponent } from './components/equipments/weapons-sword/wea
     GreatSwordsComponent,
     BeliasDetailsComponent,
     MateusDetailsComponent,
-    AdrammelechDetailsComponent
+    AdrammelechDetailsComponent,
+    ItemsDetailsComponent
   ],
 })
 export class SharedModule {}

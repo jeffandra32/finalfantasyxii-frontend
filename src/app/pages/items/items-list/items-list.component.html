@@ -1,0 +1,80 @@
+<div class="header bg-gradient-danger pb-3 pt-2 pt-md-5"></div>
+
+<div class="container mt-2">
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a
+        class="nav-link active"
+        id="belias-tab"
+        data-toggle="tab"
+        href="#belias"
+        role="tab"
+        aria-controls="belias"
+        aria-selected="true"
+      >
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/finalfantasyxiitza-28b6f.appspot.com/o/icons%2FItem-Herb.png?alt=media&token=5423dce5-0691-442a-aa1b-74c808fd2728"
+          alt="Items"
+        />
+        Items</a
+      >
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="mateus-tab"
+        data-toggle="tab"
+        href="#mateus"
+        role="tab"
+        aria-controls="mateus"
+        aria-selected="true"
+      >
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/finalfantasyxiitza-28b6f.appspot.com/o/icons%2FLoot.png?alt=media&token=1630ba7a-a340-46f6-bde3-f9bb1af85793"
+          alt="Loots"
+        />
+        Loots</a
+      >
+    </li>
+  </ul>
+
+  <!-- TAB_CONTENT -->
+  <div class="tab-content" id="myTabContent">
+    <!-- ITEMS -->
+    <div
+      class="tab-pane fade show active"
+      id="items"
+      role="tabpanel"
+      aria-labelledby="items-tab"
+    >
+      <div class="container m-2">
+        <h2>Lista de Item</h2>
+        <h4>
+          Observe que alguns itens podem ser comprados em lojas, mas apenas em
+          estágios muito posteriores do jogo. Esses novos itens são anotados na
+          seção passo a passo à medida que se tornam disponíveis. Observe também
+          que alguns baús de tesouro têm uma pequena chance de aparecer nas
+          áreas indicadas e você pode precisar entrar novamente na área para
+          encontrá-los.
+        </h4>
+      </div>
+      <app-items-details [itemsList]="itemsList"></app-items-details>
+    </div>
+
+    <!-- LOOTS -->
+    <!-- <div
+      class="tab-pane fade"
+      id="loots"
+      role="tabpanel"
+      aria-labelledby="loots-tab"
+    >
+      <div class="container m-2">
+        <h4>
+       
+        </h4>
+      </div>
+      <app-loots-details [lootsDetails]="lootsDetails"></app-loots-details>
+    </div> -->
+  </div>
+</div>

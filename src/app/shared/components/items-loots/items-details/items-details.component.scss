@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300,700");
+
+img {
+    width: 30px;
+    height: 30px;
+}
+
+p {
+    color: #06496d;
+    font-size: 16px;
+    text-align: justify;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+span {
+    margin: 0;
+    font-weight: 400;
+    color: #06496d;
+}
+
+.img-esper {
+    width: 50px;
+}
+
+.img-magick {
+    width: 30px;
+}
+
+.m-2 {
+    align-items: center;
+}
+
+.card {
+    display: inline-block;
+    width: 100%;
+    border-radius: 6px;
+    margin: 10px;
+    background: #ddd;
+    text-align: left;
+
+    &__caption {
+        background-color: rgba(#ffffff, 0.65);
+        padding: 1em;
+        position: relative;
+        border-radius: 0 0 3px 3px;
+    }
+    &__image-container {
+        background-color: rgba(#000000, 0.7);
+        text-align: center;
+        border-radius: 3px 3px 0 0;
+    }
+
+    &__type {
+        position: absolute;
+        top: 0;
+        right: 1em;
+        transform: translateY(-50%);
+        color: #ffffff;
+        text-transform: uppercase;
+        font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
+        letter-spacing: 0.1em;
+        padding: 0.25em;
+        line-height: 1;
+        border-radius: 2px;
+        background: #bbbbbb;
+    }
+
+    &__label {
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: 400;
+        display: block;
+        margin-bottom: 3px;
+    }
+
+    &__name {
+        font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
+        text-align: left;
+        font-size: 1.5em;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        margin-left: 50px;
+    }
+
+    &__stats {
+        margin: 1em 0;
+        width: 100%;
+
+        th {
+            padding: 0.25em 0.5em 0;
+            color: #06496d;
+            font-size: 14px;
+        }
+        td {
+            padding: 0.25em 0.5em 0;
+            color: #06496d;
+            font-size: 14px;
+            text-align: justify;
+        }
+    }
+
+    &__abilities {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__ability {
+        margin-top: 1em;
+        flex: 1 0;
+    }
+
+    box-shadow: 0px 5px 20px -10px #111111;
+
+    &--water {
+        background: linear-gradient(120deg, #1cb5e0 0%, #000851af 100%);
+        box-shadow: 0px 5px 20px -10px #000851;
+        .card__type {
+            background-color: #1cb5e0;
+        }
+    }
+
+    &--grass {
+        background: linear-gradient(
+            140deg,
+            rgba(196, 218, 61, 1) 0%,
+            rgba(110, 127, 14, 1) 69%,
+            rgba(39, 80, 9, 0.698) 100%
+        );
+
+        .card__type {
+            background: #6e7f0e;
+        }
+    }
+
+    position: relative;
+    transition: 0.4s;
+}
